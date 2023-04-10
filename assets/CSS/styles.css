@@ -1,0 +1,21 @@
+
+.table {
+    margin: auto;
+    margin-top: 6%;
+    width: 80%;
+}
+
+.img-fluid {
+    width: 40%;
+    margin-top: 6%;
+}
+
+.contenedor-img {
+    text-align: center;
+}
+
+.card-custom {
+    background-image: url(/assets/IMG/bg1.png) !important;
+    background-size: cover;
+}
+  
