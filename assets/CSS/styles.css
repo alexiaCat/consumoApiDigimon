@@ -1,29 +1,38 @@
 a:link {
     text-decoration: none;
-  }
-  a:visited {
-    text-decoration: none;
-  }
-
-.bg-digimon {
-    background-image: url("../IMG/bg.jpg") ;
-    background-repeat: repeat;
-    background-size:  100%;
 }
 
-.box{
+a:visited {
+    text-decoration: none;
+}
+
+.bg-digimon {
+    background-image: url("../IMG/bg.jpg");
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+.box {
     height: 800px;
 }
 
 .text-border {
--webkit-text-stroke: 0.8px red;
-color: white
+    -webkit-text-stroke: 0.8px red;
+    color: white
 }
 
 .text-btitle {
     -webkit-text-stroke: 0.5px red;
     color: orange;
+    font-family: Digimon;
+    font-size: 48px;
+    overflow-wrap: break-word;
+}
 
+@media screen and (max-width: 768px) {
+    .text-btitle {
+        font-size: 34px;
+    }
 }
 
 .text-btext {
@@ -34,17 +43,36 @@ color: white
     text-align: justify;
 }
 
+@media screen and (max-width: 768px) {
+    .text-btext {
+        font-size: 24px;
+    }
+}
+
 .modal-img {
     text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .modal-img img {
+        width: 190px;
+        height: 190px;
+    }
 }
 
 
 .btn-scroll-top {
     position: fixed;
-    bottom:50px;
-    right:50px;
+    bottom: 50px;
+    right: 50px;
 }
-  
+
+@media screen and (max-width: 768px) {
+    .btn-scroll-top  {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
 
 /* fonts */
 @font-face {
@@ -64,7 +92,7 @@ color: white
 
 @media screen and (max-width: 768px) {
     .title {
-        font-size: 28px;
+        font-size: 32px;
     }
 }
 
@@ -78,6 +106,7 @@ color: white
     font-size: 26px;
     text-align: center;
 }
+
 @media screen and (max-width: 768px) {
     .nameDigimon {
         font-size: 35px;
@@ -89,6 +118,7 @@ color: white
     font-size: 26px;
     text-align: center;
 }
+
 @media screen and (max-width: 768px) {
     .lvlDigimon {
         font-size: 20px;
@@ -101,22 +131,32 @@ color: white
     font-size: 48px;
 }
 
+@media screen and (max-width: 768px) {
+    .textOneCard {
+        font-size: 30px;
+    }
+}
+
 .textModal {
-    text-align: right;
     font-size: 22px;
+}
+@media screen and (max-width: 768px) {
+    .textModal {
+        font-size: 18px;
+    }
 }
 
 
 body::-webkit-scrollbar {
-    width: 12px;              
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: rgb(46, 46, 46);       
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: rgb(105, 35, 126);   
-    border-radius: 20px;     
-    border: 3px solid rgb(135, 143, 142);  
-  }
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(46, 46, 46);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(105, 35, 126);
+    border-radius: 20px;
+    border: 3px solid rgb(135, 143, 142);
+}

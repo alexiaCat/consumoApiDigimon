@@ -20,7 +20,7 @@ fetch('https://digimon-api.vercel.app/api/digimon')
     data.forEach(digimon => {
       // Crear un elemento de columna de Bootstrap
       const columnElement = document.createElement('div');
-      columnElement.className = 'col-sm-2 mb-4'
+      columnElement.className = ' col-xl-2 col-lg-2  col-md-3  col-sm-12 col-xs-12 mb-4'
       // Crear un elemento de tarjeta de Bootstrap para el digimon
       const cardElement = document.createElement('div');
       cardElement.className = 'card bg-dark border-dark';

@@ -1,4 +1,4 @@
-# Título del Proyecto
+# Web responsive que consume API gratuita de digimon
 
 Consumo de API gratuita de Digimon en forma responsiva con HTML, JS y BOOTSTRAP
 
