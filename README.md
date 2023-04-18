@@ -8,10 +8,7 @@ _Página web estática utilizando componentes de bootstrap y fuentes personaliza
 
 ```
 
-### Instalación 🔧
-
-_Ejecutar archivo index.html_
-
+Ejecutar archivo index.html
 
 ```
 

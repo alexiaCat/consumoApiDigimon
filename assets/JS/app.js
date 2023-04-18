@@ -3,6 +3,15 @@
 // Obtener referencia al elemento donde se mostrarán los digimon
 const digimonListElement = document.getElementById('digimon-list');
 
+// todos los digimon
+var urlAll = 'https://digimon-api.vercel.app/api/digimon';
+
+//digimon por tipo champion
+const urlChampion = 'https://digimon-api.vercel.app/api/digimon/level/champion'
+
+
+
+
 // Hacer una solicitud HTTP a la API
 fetch('https://digimon-api.vercel.app/api/digimon')
   .then(response => response.json()) // Parsear la respuesta como JSON
@@ -11,12 +20,13 @@ fetch('https://digimon-api.vercel.app/api/digimon')
     data.forEach(digimon => {
       // Crear un elemento de columna de Bootstrap
       const columnElement = document.createElement('div');
-      columnElement.className = 'col-sm-4 mb-4'
+      columnElement.className = 'col-sm-2 mb-4'
       // Crear un elemento de tarjeta de Bootstrap para el digimon
       const cardElement = document.createElement('div');
-      cardElement.className = 'card card-custom border-dark';
+      cardElement.className = 'card bg-dark border-dark';
       cardElement.style.cursor = 'pointer';
       cardElement.onclick = () => showDigimon(digimon);
+
 
       // Agregar la imagen del digimon a la tarjeta
       const imageElement = document.createElement('img');
@@ -27,14 +37,14 @@ fetch('https://digimon-api.vercel.app/api/digimon')
       // Agregar el nombre del digimon a la tarjeta
       const nameElement = document.createElement('h1');
       nameElement.innerText = digimon.name;
-      nameElement.className = 'nameDigimon';
+      nameElement.className = 'text-border mt-4 nameDigimon';
       cardElement.appendChild(nameElement);
 
 
-      //Agregar el level a la tarjeta del
+      //Agregar el level a la tarjeta
       const lvlElement = document.createElement('p');
       lvlElement.innerText = digimon.level;
-      lvlElement.className = 'lvlDigimon'; 
+      lvlElement.className = 'text-light lvlDigimon'; 
       cardElement.appendChild(lvlElement);
 
       // Agregar la tarjeta a la columna
@@ -47,49 +57,24 @@ fetch('https://digimon-api.vercel.app/api/digimon')
 
 // Función para mostrar un digimon en pantalla completa
 function showDigimon(digimon) {
-  // Ocultar la lista de digimon
-  digimonListElement.style.display = 'none';
+  // Seleccionamos el modal a través de su ID
+  const modal = $('#exampleModalCenter');
 
-  // Crear un elemento de imagen para el digimon
-  const imageElement = document.createElement('img');
-  imageElement.src = digimon.img;
-  imageElement.style.width = '50%';
+  // Modificamos el contenido del modal con los datos del digimon
+  modal.find('.textOneCard').text(digimon.name);
+  modal.find('.modal-img').html(`<img src="${digimon.img}" alt="${digimon.name}">`);
+  modal.find('.textModal').text(digimon.level);
 
-  // Crear un botón para volver a la lista de digimon
-  const backButton = document.createElement('button');
-  backButton.innerText = 'Volver';
-  backButton.className = 'btn btn-primary';
-  backButton.onclick = () => {
-    // Mostrar la lista de digimon de nuevo
-    digimonListElement.style.display = 'flex';
-    // Eliminar la imagen y el botón
-    imageElement.remove();
-    backButton.remove();
-  };
-
-  // Agregar la imagen y el botón a la página
-  document.body.appendChild(imageElement);
-  document.body.appendChild(backButton);
+  // Abrimos el modal
+  modal.modal('show');
 }
 
-const searchButton = document.querySelector('#searchButton');
+// Para ir al top de mi página
+var btnTop = document.getElementById("btn-top");
 
-searchButton.addEventListener('click', searchDigimon);
-
-
-
-//Función para buscar un digimon
-function searchDigimon() {
-  const searchInput = document.querySelector('#searchDig');
-
-  // Filter digimon based on search input
-  searchInput.addEventListener('input', () => {
-    const searchValue = searchInput.value.toLowerCase();
- 
-    const filteredDigimon = data.find(digimon => digimon.name.toLowerCase().includes(searchValue));
-    showDigimon(filteredDigimon);
+btnTop.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
   });
-
-
-}
-
+});

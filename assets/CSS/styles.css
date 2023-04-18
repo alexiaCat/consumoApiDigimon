@@ -1,21 +1,122 @@
+a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
 
-.table {
-    margin: auto;
-    margin-top: 6%;
-    width: 80%;
+.bg-digimon {
+    background-image: url("../IMG/bg.jpg") ;
+    background-repeat: repeat;
+    background-size:  100%;
 }
 
-.img-fluid {
-    width: 40%;
-    margin-top: 6%;
+.box{
+    height: 800px;
 }
 
-.contenedor-img {
+.text-border {
+-webkit-text-stroke: 0.8px red;
+color: white
+}
+
+.text-btitle {
+    -webkit-text-stroke: 0.5px red;
+    color: orange;
+
+}
+
+.text-btext {
+    -webkit-text-stroke: 0.2px rgb(255, 189, 159);
+    color: white;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-size: 32px;
+    text-align: justify;
+}
+
+.modal-img {
     text-align: center;
 }
 
-.card-custom {
-    background-image: url(/assets/IMG/bg1.png) !important;
-    background-size: cover;
+
+.btn-scroll-top {
+    position: fixed;
+    bottom:50px;
+    right:50px;
 }
   
+
+/* fonts */
+@font-face {
+    src: url('/assets/FONT/DigimonBasic.ttf');
+    font-family: 'Digimon';
+}
+
+.home {
+    font-family: Digimon;
+    font-size: 20px;
+}
+
+.title {
+    font-family: Digimon;
+    font-size: 48px;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 28px;
+    }
+}
+
+.terms {
+    font-family: Digimon;
+    font-size: 18px;
+}
+
+.nameDigimon {
+    font-family: Digimon;
+    font-size: 26px;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .nameDigimon {
+        font-size: 35px;
+    }
+}
+
+.lvlDigimon {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-size: 26px;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .lvlDigimon {
+        font-size: 20px;
+    }
+}
+
+.textOneCard {
+    text-align: center;
+    font-family: Digimon;
+    font-size: 48px;
+}
+
+.textModal {
+    text-align: right;
+    font-size: 22px;
+}
+
+
+body::-webkit-scrollbar {
+    width: 12px;              
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(46, 46, 46);       
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(105, 35, 126);   
+    border-radius: 20px;     
+    border: 3px solid rgb(135, 143, 142);  
+  }
