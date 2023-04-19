@@ -8,7 +8,8 @@ _Página web estática utilizando componentes de bootstrap y fuentes personaliza
 
 ```
 
-Ejecutar archivo index.html
+- Descargar carpeta con todos los archivos ya que contiene fuente personalizada.
+- Ejecutar index.html
 
 ```
 
