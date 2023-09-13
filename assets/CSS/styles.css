@@ -76,7 +76,7 @@ a:visited {
 
 /* fonts */
 @font-face {
-    src: url('/assets/FONT/DigimonBasic.ttf');
+    src: url('assets/FONT/DigimonBasic.ttf');
     font-family: 'Digimon';
 }
 
